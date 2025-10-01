@@ -4,6 +4,16 @@
 // - annualInvestment: The amount invested every year
 // - expectedReturn: The expected (annual) rate of return
 // - duration: The investment duration (time frame)
+
+// tableData.map((data) => {
+                    // <tr key={data.year}>
+                    //     <td>{data.year}</td>
+                    //     <td>{data.valueEndOfYear}</td>
+                    //     <td>{data.interest}</td>
+                    //     <td>{/* Total interest calculation needed */}</td>
+                    //     <td>{/* Invested capital calculation needed */}</td>
+                    // </tr>
+
 export function calculateInvestmentResults({
   initialInvestment,
   annualInvestment,
