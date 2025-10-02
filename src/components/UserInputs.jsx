@@ -1,30 +1,12 @@
-import { uesState } from "react";
-
-export default function UserInputs({ handleChange, inputs }) {
-    const [userInput, setUserInput] = uesState({
-        initialInvestment: 10000,
-        annualInvestment: 1200,
-        expectedReturn: 6,
-        duration: 6,
-    });
-
-    function handleChange(inputIdentifier, newValue) {
-        setUserInput((prevInput) => {
-            return {
-                ...prevInput,
-                [inputIdentifier]: newValue,
-            };
-        });
-    }
-
+export default function UserInputs({ onChange, inputs }) {
     return (
         <section id="user-input">
             <div className="input-group">
                 <p>
                     <label>Initial Investment</label>
                     <input
-                        onChange={handleChange}
-                        value={inputs.initialInvestment}
+                        onChange={onChange}
+                        defaultValue={inputs.initialInvestment}
                         type="number"
                         required
                         name="initialInvestment"
@@ -33,8 +15,8 @@ export default function UserInputs({ handleChange, inputs }) {
                 <p>
                     <label>Annual Investment</label>
                     <input
-                        onChange={handleChange}
-                        value={inputs.annualInvestment}
+                        onChange={onChange}
+                        defaultValue={inputs.annualInvestment}
                         type="number"
                         required
                         name="annualInvestment"
@@ -45,8 +27,8 @@ export default function UserInputs({ handleChange, inputs }) {
                 <p>
                     <label>Expected Return</label>
                     <input
-                        onChange={handleChange}
-                        value={inputs.expectedReturn}
+                        onChange={onChange}
+                        defaultValue={inputs.expectedReturn}
                         name="expectedReturn"
                         required
                         type="number"
@@ -55,8 +37,8 @@ export default function UserInputs({ handleChange, inputs }) {
                 <p>
                     <label>Duration</label>
                     <input
-                        onChange={handleChange}
-                        value={inputs.duration}
+                        onChange={onChange}
+                        defaultValue={inputs.duration}
                         type="number"
                         required
                         name="duration"

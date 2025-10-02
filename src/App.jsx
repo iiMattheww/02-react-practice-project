@@ -1,6 +1,5 @@
-import ResultTable from "./components/ResultTable";
+import Results from "./components/Results";
 import UserInputs from "./components/UserInputs";
-import { calculateInvestmentResults } from "./util/investment";
 import { useState } from "react";
 
 function App() {
@@ -8,27 +7,22 @@ function App() {
         initialInvestment: 10000,
         annualInvestment: 1200,
         expectedReturn: 6,
-        duration: 6,
+        duration: 10,
     });
-    const [tableData, setTableData] = useState(
-        calculateInvestmentResults(inputs)
-    );
     function handleChange(event) {
         const { name, value } = event.target;
-        const updatedInputs = {
-            ...inputs,
-            [name]: +value,
-        };
-        setInputs(updatedInputs);
-        const newTableData = calculateInvestmentResults(updatedInputs);
-        // console.log(newTableData);
-        setTableData(newTableData);
+        setInputs((prevInputs) => {
+            return { ...prevInputs, [name]: +value };
+        });
     }
+
+    const inputIsValid = inputs.duration > 0 ;
 
     return (
         <>
-            <UserInputs handleChange={handleChange} inputs={inputs} />
-            <ResultTable tableData={tableData} />
+            <UserInputs onChange={handleChange} inputs={inputs} />
+            {!inputIsValid && <p className="center">Please enter a valid duration.</p>}
+            {inputIsValid && <Results inputs={inputs} />}
         </>
     );
 }
