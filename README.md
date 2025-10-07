@@ -5,45 +5,48 @@ Users can enter their initial investment, annual investment, expected return rat
 
 ## Features
 
-- **User Inputs:**  
-  Enter initial investment, annual investment, expected return (%), and duration (years).
+-   **User Inputs:**  
+    Enter initial investment, annual investment, expected return (%), and duration (years).
 
-- **Live Calculation:**  
-  Results update instantly as you change any input.
+-   **Live Calculation:**  
+    Results update instantly as you change any input.
 
-- **Results Table:**  
-  See a detailed table of your investment value, yearly interest, total interest, and invested capital for each year.
+-   **Results Table:**  
+    See a detailed table of your investment value, yearly interest, total interest, and invested capital for each year.
 
-- **Validation:**  
-  Prevents calculation if the duration is not valid.
+-   **Validation:**  
+    Prevents calculation if the duration is not valid.
 
 ## Getting Started
 
 1. **Clone the repository:**
-   ```sh
-   git clone <your-repo-url>
-   cd 02-react-practice-project
-   ```
+
+    ```sh
+    git clone https://github.com/iiMattheww/investment-calculator.git
+    cd investment-calculator
+    ```
 
 2. **Install dependencies:**
-   ```sh
-   npm install
-   ```
+
+    ```sh
+    npm install
+    ```
 
 3. **Start the development server:**
-   ```sh
-   npm start
-   ```
+
+    ```sh
+    npm start
+    ```
 
 4. **Open in browser:**  
-   Visit [http://localhost:3000](http://localhost:3000)
+   Visit [http://localhost:5173](http://localhost:5173)
 
 ## Project Structure
 
-- `src/App.jsx` – Main app logic and state management
-- `src/components/UserInputs.jsx` – Input form for investment parameters
-- `src/components/Results.jsx` – Displays the results table
-- `src/util/investment.js` – Investment calculation logic
+-   `src/App.jsx` – Main app logic and state management
+-   `src/components/UserInputs.jsx` – Input form for investment parameters
+-   `src/components/Results.jsx` – Displays the results table
+-   `src/util/investment.js` – Investment calculation logic
 
 ## Customization
 
@@ -51,4 +54,6 @@ You can adjust the default values in `App.jsx` or enhance the UI as you wish.
 
 ## License
 
-This project is for learning and personal use.
+This project is licensed under the MIT License.
+
+Made with ❤️ for React practice!
